@@ -15,9 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        print("Finished launching")
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
+
         return true
     }
-
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+     //       print("App did enter background")
+    }
+    func applicationWillEnterForeground(_ application: UIApplication) {
+       //     print("Entering foreground")
+    }
+    
+     func applicationWillTerminate(_ application: UIApplication) {
+    //  print("app will terminate")
+    }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
